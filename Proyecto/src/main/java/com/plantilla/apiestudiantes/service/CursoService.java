@@ -105,12 +105,16 @@ public class CursoService implements ICursoService {
     private void validateModality (String modality) {
 
         if(modality == null || modality.isEmpty()){
-            throw new CursoInvalidException("Debe poseer alguna modalidad");
+            throw new CursoInvalidException("curso.validate.modality.empty");
         }
 
         if(!(modality.equalsIgnoreCase("Presencial") || modality.equalsIgnoreCase("Virtual"))){
-            throw new CursoInvalidException("La modalidad es incorrecta");
-
+            String userMessage = messageSource.getMessage(
+                    "curso.validate.modality.error",
+                    new Object[]{modality},
+                    LocaleContextHolder.getLocale()
+            );
+            throw new CursoInvalidException(userMessage);
         }
 
     }
