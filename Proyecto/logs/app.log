@@ -1,0 +1,217 @@
+2024-12-17T14:08:20.401-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : Starting ApiEstudiantesApplication using Java 17.0.11 with PID 8240 (C:\Users\palmi\OneDrive\Documentos\Facu\1- Programación\Instructivos\ApiEstudiantes\Proyecto\target\classes started by Facundo Palmieri in C:\Users\palmi\OneDrive\Documentos\Facu\1- Programación\Instructivos\ApiEstudiantes\Proyecto)
+2024-12-17T14:08:20.403-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-12-17T14:08:20.472-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-17T14:08:20.472-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-17T14:08:22.284-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-17T14:08:22.374-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 2 JPA repository interfaces.
+2024-12-17T14:08:23.775-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-17T14:08:23.800-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-17T14:08:23.800-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-17T14:08:23.895-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-17T14:08:23.895-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3421 ms
+2024-12-17T14:08:24.108-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-17T14:08:24.374-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73df4e18
+2024-12-17T14:08:24.376-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-17T14:08:24.395-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/estudiantes_BD?createDatabaseIfNotExist=true'
+2024-12-17T14:08:24.707-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-17T14:08:24.849-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-17T14:08:24.929-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-17T14:08:25.453-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-17T14:08:25.595-03:00  WARN 8240 --- [APIEstudiantes] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.18 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-12-17T14:08:27.056-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-17T14:08:27.271-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T14:08:27.732-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-17T14:08:28.361-03:00  WARN 8240 --- [APIEstudiantes] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-17T14:08:29.532-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-17T14:08:29.542-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2024-12-17T14:08:29.640-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-17T14:08:29.661-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : Started ApiEstudiantesApplication in 9.91 seconds (process running for 10.901)
+2024-12-17T14:08:29.868-03:00  INFO 8240 --- [APIEstudiantes] [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as c805f5316c7e
+2024-12-17T14:08:29.920-03:00  INFO 8240 --- [APIEstudiantes] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-17T14:08:42.453-03:00  WARN 8240 --- [APIEstudiantes] [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1146, SQLState: 42S02
+2024-12-17T14:08:42.454-03:00 ERROR 8240 --- [APIEstudiantes] [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table 'estudiantes_bd.curso' doesn't exist
+2024-12-17T14:08:42.481-03:00 ERROR 8240 --- [APIEstudiantes] [http-nio-8080-exec-6] c.p.a.exception.GlobalExceptionHandler   : Error al acceder a la base de datos: [ENTIDAD: Curso] - [ID null] -  [NOMBRE:Programación I] - [OPERACIÓN:Save] -  [CAUSA RAÍZ: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select c1_0.id,c1_0.fecha_creacion,c1_0.fecha_ultima_modificacion,c1_0.fecha_finalizacion,c1_0.habilitado,c1_0.modalidad,c1_0.nombre from curso c1_0 where upper(c1_0.nombre)=upper(?)] [Table 'estudiantes_bd.curso' doesn't exist] [n/a]] - [MENSAJE USUARIO: Error al guardar el curso 'Programación I'. Por favor, inténtelo nuevamente.]
+2024-12-17T14:23:19.124-03:00  INFO 8240 --- [APIEstudiantes] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-12-17T14:23:19.349-03:00  INFO 8240 --- [APIEstudiantes] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T14:23:19.364-03:00  INFO 8240 --- [APIEstudiantes] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-17T14:23:19.399-03:00  INFO 8240 --- [APIEstudiantes] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-17T14:23:19.644-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : Starting ApiEstudiantesApplication using Java 17.0.11 with PID 8240 (C:\Users\palmi\OneDrive\Documentos\Facu\1- Programación\Instructivos\ApiEstudiantes\Proyecto\target\classes started by Facundo Palmieri in C:\Users\palmi\OneDrive\Documentos\Facu\1- Programación\Instructivos\ApiEstudiantes\Proyecto)
+2024-12-17T14:23:19.644-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-12-17T14:23:20.327-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-17T14:23:20.340-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+2024-12-17T14:23:20.584-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-17T14:23:20.585-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-17T14:23:20.585-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-17T14:23:20.611-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-17T14:23:20.611-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 961 ms
+2024-12-17T14:23:20.716-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-12-17T14:23:20.769-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b53867e
+2024-12-17T14:23:20.769-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-12-17T14:23:20.770-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/estudiantes_BD?createDatabaseIfNotExist=true'
+2024-12-17T14:23:20.895-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-17T14:23:20.902-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-17T14:23:20.947-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-17T14:23:20.955-03:00  WARN 8240 --- [APIEstudiantes] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.18 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-12-17T14:23:21.089-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-17T14:23:21.364-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T14:23:21.390-03:00  WARN 8240 --- [APIEstudiantes] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cursoController': Unsatisfied dependency expressed through field 'IcursoService': No qualifying bean of type 'com.plantilla.apiestudiantes.service.ICursoService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-12-17T14:23:21.390-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T14:23:21.392-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-12-17T14:23:21.395-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-12-17T14:23:21.397-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-17T14:23:21.415-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-17T14:23:21.474-03:00 ERROR 8240 --- [APIEstudiantes] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field IcursoService in com.plantilla.apiestudiantes.controller.CursoController required a bean of type 'com.plantilla.apiestudiantes.service.ICursoService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.plantilla.apiestudiantes.service.ICursoService' in your configuration.
+
+2024-12-17T14:23:22.955-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : Starting ApiEstudiantesApplication using Java 17.0.11 with PID 8240 (C:\Users\palmi\OneDrive\Documentos\Facu\1- Programación\Instructivos\ApiEstudiantes\Proyecto\target\classes started by Facundo Palmieri in C:\Users\palmi\OneDrive\Documentos\Facu\1- Programación\Instructivos\ApiEstudiantes\Proyecto)
+2024-12-17T14:23:22.956-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-12-17T14:23:23.602-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-17T14:23:23.623-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
+2024-12-17T14:23:23.845-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-17T14:23:23.847-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-17T14:23:23.847-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-17T14:23:23.865-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-12-17T14:23:23.865-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 907 ms
+2024-12-17T14:23:23.923-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-12-17T14:23:23.928-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2735efc4
+2024-12-17T14:23:23.928-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-12-17T14:23:23.929-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/estudiantes_BD?createDatabaseIfNotExist=true'
+2024-12-17T14:23:24.043-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-17T14:23:24.061-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-17T14:23:24.075-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-17T14:23:24.078-03:00  WARN 8240 --- [APIEstudiantes] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.18 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-12-17T14:23:24.175-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-17T14:23:24.219-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T14:23:24.435-03:00  WARN 8240 --- [APIEstudiantes] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-17T14:23:25.089-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-17T14:23:25.096-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2024-12-17T14:23:25.142-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-17T14:23:25.156-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : Started ApiEstudiantesApplication in 2.23 seconds (process running for 906.396)
+2024-12-17T14:23:25.160-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-17T14:23:25.228-03:00  INFO 8240 --- [APIEstudiantes] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-17T14:23:25.246-03:00  INFO 8240 --- [APIEstudiantes] [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as c805f5316c7e
+2024-12-17T14:35:25.090-03:00  INFO 8240 --- [APIEstudiantes] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-12-17T14:35:25.293-03:00  INFO 8240 --- [APIEstudiantes] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T14:35:25.297-03:00  INFO 8240 --- [APIEstudiantes] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-12-17T14:35:25.315-03:00  INFO 8240 --- [APIEstudiantes] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-12-17T14:35:25.458-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : Starting ApiEstudiantesApplication using Java 17.0.11 with PID 8240 (C:\Users\palmi\OneDrive\Documentos\Facu\1- Programación\Instructivos\ApiEstudiantes\Proyecto\target\classes started by Facundo Palmieri in C:\Users\palmi\OneDrive\Documentos\Facu\1- Programación\Instructivos\ApiEstudiantes\Proyecto)
+2024-12-17T14:35:25.459-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-12-17T14:35:26.193-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-17T14:35:26.218-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2024-12-17T14:35:26.575-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-17T14:35:26.576-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-17T14:35:26.576-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-17T14:35:26.596-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-12-17T14:35:26.597-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1135 ms
+2024-12-17T14:35:26.680-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-12-17T14:35:26.691-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@656c6627
+2024-12-17T14:35:26.691-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-12-17T14:35:26.691-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/estudiantes_BD?createDatabaseIfNotExist=true'
+2024-12-17T14:35:26.768-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-17T14:35:26.773-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-17T14:35:26.791-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-17T14:35:26.795-03:00  WARN 8240 --- [APIEstudiantes] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.18 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-12-17T14:35:26.902-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-17T14:35:26.921-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T14:35:27.138-03:00  WARN 8240 --- [APIEstudiantes] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-17T14:35:27.872-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-17T14:35:27.879-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2024-12-17T14:35:27.917-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-17T14:35:27.936-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : Started ApiEstudiantesApplication in 2.518 seconds (process running for 1629.175)
+2024-12-17T14:35:27.940-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-17T14:35:28.242-03:00  INFO 8240 --- [APIEstudiantes] [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as c805f5316c7e
+2024-12-17T14:35:28.246-03:00  INFO 8240 --- [APIEstudiantes] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-17T14:38:06.195-03:00  INFO 8240 --- [APIEstudiantes] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-12-17T14:38:06.501-03:00  INFO 8240 --- [APIEstudiantes] [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T14:38:06.502-03:00  INFO 8240 --- [APIEstudiantes] [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-12-17T14:38:06.509-03:00  INFO 8240 --- [APIEstudiantes] [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-12-17T14:38:06.635-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : Starting ApiEstudiantesApplication using Java 17.0.11 with PID 8240 (C:\Users\palmi\OneDrive\Documentos\Facu\1- Programación\Instructivos\ApiEstudiantes\Proyecto\target\classes started by Facundo Palmieri in C:\Users\palmi\OneDrive\Documentos\Facu\1- Programación\Instructivos\ApiEstudiantes\Proyecto)
+2024-12-17T14:38:06.635-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-12-17T14:38:07.412-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-17T14:38:07.431-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2024-12-17T14:38:07.775-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-17T14:38:07.777-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-17T14:38:07.777-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-17T14:38:07.803-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-12-17T14:38:07.803-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1164 ms
+2024-12-17T14:38:07.903-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-12-17T14:38:07.911-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c453ce4
+2024-12-17T14:38:07.912-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-12-17T14:38:07.912-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/estudiantes_BD?createDatabaseIfNotExist=true'
+2024-12-17T14:38:08.044-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-17T14:38:08.049-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-17T14:38:08.071-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-17T14:38:08.075-03:00  WARN 8240 --- [APIEstudiantes] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.18 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-12-17T14:38:08.188-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-17T14:38:08.207-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T14:38:08.230-03:00  WARN 8240 --- [APIEstudiantes] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cursoController': Unsatisfied dependency expressed through field 'IcursoService': No qualifying bean of type 'com.plantilla.apiestudiantes.service.ICursoService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-12-17T14:38:08.231-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T14:38:08.232-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-12-17T14:38:08.255-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-12-17T14:38:08.256-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-17T14:38:08.275-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-17T14:38:08.287-03:00 ERROR 8240 --- [APIEstudiantes] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field IcursoService in com.plantilla.apiestudiantes.controller.CursoController required a bean of type 'com.plantilla.apiestudiantes.service.ICursoService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.plantilla.apiestudiantes.service.ICursoService' in your configuration.
+
+2024-12-17T14:38:10.850-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : Starting ApiEstudiantesApplication using Java 17.0.11 with PID 8240 (C:\Users\palmi\OneDrive\Documentos\Facu\1- Programación\Instructivos\ApiEstudiantes\Proyecto\target\classes started by Facundo Palmieri in C:\Users\palmi\OneDrive\Documentos\Facu\1- Programación\Instructivos\ApiEstudiantes\Proyecto)
+2024-12-17T14:38:10.850-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-12-17T14:38:11.650-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-17T14:38:11.673-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-12-17T14:38:12.013-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-17T14:38:12.014-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-17T14:38:12.014-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-17T14:38:12.040-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-12-17T14:38:12.041-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1186 ms
+2024-12-17T14:38:12.140-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-12-17T14:38:12.149-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6659d5dd
+2024-12-17T14:38:12.149-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-12-17T14:38:12.150-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/estudiantes_BD?createDatabaseIfNotExist=true'
+2024-12-17T14:38:12.254-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-17T14:38:12.262-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-17T14:38:12.280-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-17T14:38:12.283-03:00  WARN 8240 --- [APIEstudiantes] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.18 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-12-17T14:38:12.372-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-17T14:38:12.384-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T14:38:12.695-03:00  WARN 8240 --- [APIEstudiantes] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-17T14:38:13.589-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-17T14:38:13.601-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2024-12-17T14:38:13.662-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-17T14:38:13.687-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] c.p.a.ApiEstudiantesApplication          : Started ApiEstudiantesApplication in 2.903 seconds (process running for 1794.926)
+2024-12-17T14:38:13.691-03:00  INFO 8240 --- [APIEstudiantes] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-17T14:38:13.719-03:00  INFO 8240 --- [APIEstudiantes] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-17T14:38:13.723-03:00  INFO 8240 --- [APIEstudiantes] [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as c805f5316c7e
+2024-12-17T15:01:03.770-03:00  WARN 8240 --- [APIEstudiantes] [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=APIEstudiantes, managementUrl=http://DESKTOP-5P0OESJ:8080/actuator, healthUrl=http://DESKTOP-5P0OESJ:8080/actuator/health, serviceUrl=http://DESKTOP-5P0OESJ:8080/) at spring-boot-admin ([http://localhost:8081/instances]): I/O error on POST request for "http://localhost:8081/instances": Connection refused: no further information. Further attempts are logged on DEBUG level

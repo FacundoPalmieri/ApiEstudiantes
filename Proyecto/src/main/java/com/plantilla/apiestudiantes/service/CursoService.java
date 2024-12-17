@@ -3,6 +3,7 @@ package com.plantilla.apiestudiantes.service;
 import com.plantilla.apiestudiantes.dto.*;
 import com.plantilla.apiestudiantes.exception.CursoNotFoundException;
 import com.plantilla.apiestudiantes.exception.CursoInvalidException;
+import com.plantilla.apiestudiantes.exception.DataBaseException;
 import com.plantilla.apiestudiantes.model.Curso;
 import com.plantilla.apiestudiantes.model.Tema;
 import com.plantilla.apiestudiantes.repository.CursoRepository;
@@ -52,18 +53,35 @@ public class CursoService implements ICursoService {
      */
     @Override
     public Response<CursoDto> saveCurso(Curso curso) {
+        try{
+            // Validaciones previas.
+            validateNameNotExist(curso.getNombre());
+            validateModality(curso.getModalidad());
 
-        // Validaciones previas.
-        validateNameNotExist(curso.getNombre());
-        validateModality(curso.getModalidad());
+            // Guarda el curso
+            Curso cursoAux = cursoRepository.save(curso);
 
-        // Guarda el curso
-        Curso cursoAux = cursoRepository.save(curso);
+            // Construye el DTO para devolver
+            CursoDto cursoDto = buildCursoDtoCreate(cursoAux);
 
-        // Construye el DTO para devolver
-        CursoDto cursoDto = buildCursoDtoCreate(cursoAux);
+            return new Response<>(true, "Se ha guardado correctamente",cursoDto);
+        }catch (Exception ex) {
+            // Si ocurre un error, se lanza la DataBaseException con la información necesaria
 
-        return new Response<>(true, "Se ha guardado correctamente",cursoDto);
+            //Se guarda el motivo de la causa raíz
+            String rootCause = ex.getCause() != null ? ex.getCause().toString() : "Desconocida";
+
+            // Concatenar el nombre del curso para el mensaje al usuario
+            String userMessage = "Error al guardar el curso '" + curso.getNombre() + "'. Por favor, inténtelo nuevamente.";
+
+            throw new DataBaseException(
+                    userMessage,       // Mensaje al usuario
+                    "Curso",           // Tipo de entidad
+                    curso.getId(),     // ID del curso
+                    curso.getNombre(), // Nombre del curso
+                    "Save",            // Operation
+                    rootCause);        // Causa raíz del error
+        }
     }
 
     private void validateNameNotExist (String name) {

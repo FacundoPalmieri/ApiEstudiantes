@@ -3,6 +3,7 @@ package com.plantilla.apiestudiantes.exception;
 
 import com.plantilla.apiestudiantes.dto.Response;
 import jakarta.validation.ConstraintViolationException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataAccessResourceFailureException;
 import org.springframework.dao.InvalidDataAccessResourceUsageException;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import java.util.HashMap;
 import java.util.Map;
 
+@Slf4j
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -29,6 +31,9 @@ public class GlobalExceptionHandler {
     // Clase de excepción personalizada para Curso no encontrado
     @ExceptionHandler(CursoNotFoundException.class)
     public ResponseEntity<Response<String>> handleCursoNotFoundException(CursoNotFoundException e) {
+        // Loguear la excepción para detalles de diagnóstico
+        log.error("Curso no encontrado: " + e.getMessage(), e);
+
         // Respuesta personalizada para CursoNotFoundException
         Response<String> response = new Response<>(false, e.getMessage(), null);
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
@@ -48,6 +53,9 @@ public class GlobalExceptionHandler {
     // Clase de excepción personalizada para Curso inválido
     @ExceptionHandler(CursoInvalidException.class)
     public ResponseEntity<Response<String>> handleInvalidCursoException(CursoInvalidException e) {
+        // Loguear la excepción para detalles de diagnóstico
+        log.error("Curso inválido: " + e.getMessage(), e);
+
         // Respuesta personalizada para CursoInvalidException
         Response<String> response = new Response<>(false, e.getMessage(), null);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
@@ -68,6 +76,9 @@ public class GlobalExceptionHandler {
     // Clase de excepción personalizada para errores de Tema
     @ExceptionHandler(TemaException.class)
     public ResponseEntity<Response<String>> handleTemaException(TemaException e) {
+        // Loguear la excepción para detalles de diagnóstico
+        log.error("Error en el tema: " + e.getMessage(), e);
+
         Response<String> response = new Response<>(false, e.getMessage(), null);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
@@ -90,6 +101,7 @@ public class GlobalExceptionHandler {
         ex.getBindingResult().getFieldErrors().forEach(error -> {
             errors.put(error.getField(), error.getDefaultMessage());
         });
+        log.error("Error de validación: " + errors, ex);
         Response<Map<String, String>> response = new Response<>(false, "Errores de validación", errors);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
@@ -113,6 +125,7 @@ public class GlobalExceptionHandler {
             String errorMessage = violation.getMessage();
             errors.put(fieldName, errorMessage);
         });
+        log.error("Error de validación en parámetros de controller: " + errors, ex);
         Response<Map<String, String>> response = new Response<>(false, "Errores de validación en los parámetros", errors);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
@@ -120,28 +133,22 @@ public class GlobalExceptionHandler {
 
 
     /**
-     * Maneja las excepciones relacionadas con errores de acceso a la base de datos,
-     * como cuando hay un problema de conexión o acceso a los recursos de la base de datos.
+     * Maneja las excepciones de tipo {@link DataBaseException}.
+     * Esta excepción se lanza cuando ocurre un error específico relacionado con la persistencia en la base de datos.
      *
-     * @param ex La excepción lanzada debido a un error de acceso a la base de datos.
+     * @param ex La excepción lanzada cuando ocurre un error en la base de datos.
      * @return Una respuesta HTTP con el código de estado 500 (INTERNAL_SERVER_ERROR) y el mensaje de error.
      */
-    // Manejo de exception por errores de conectivad a la base de datos.
-    @ExceptionHandler(DataAccessResourceFailureException.class)
-    public ResponseEntity<Response<String>> DataAccessResourceFailureException(DataAccessResourceFailureException ex) {
-        Response<String> response = new Response<>(false, "Error de conexión a la base de datos", null);
+    @ExceptionHandler(DataBaseException.class)
+    public ResponseEntity<Response<String>> handleDataBaseException(DataBaseException ex) {
+        // Loguear el error para diagnóstico
+        log.error("Error al acceder a la base de datos: [ENTIDAD: {}] - [ID {}] -  [NOMBRE:{}] - [OPERACIÓN:{}] -  [CAUSA RAÍZ: {}] - [MENSAJE USUARIO: {}]",
+                ex.getEntityType(),  ex.getEntityId(), ex.getEntityName(), ex.getOperation(), ex.getRootCause(), ex.getMessage());
+
+        // Mensaje para el usuario final
+        Response<String> response = new Response<>(false, ex.getMessage(), null);
         return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     }
-
-    // Maneja errorres de datos
-    @ExceptionHandler(InvalidDataAccessResourceUsageException.class)
-    public ResponseEntity<Response<String>> handleInvalidDataAccessResourceUsageException(InvalidDataAccessResourceUsageException ex) {
-        // Respuesta personalizada para InvalidDataAccessResourceUsageException
-        Response<String> response = new Response<>(false, "Error de acceso a la base de datos: " + ex.getMessage(), null);
-        return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR); // 500: Error interno del servidor
-    }
-
-
 
 
     /**
@@ -155,7 +162,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Response<String>> handleGeneralException(Exception e) {
         // Loguear la excepción para detalles de diagnóstico
-        e.printStackTrace();  // O usar un logger para registrarlo
+        log.error("Error inesperado: " + e.getMessage(), e);
 
         // Respuesta genérica para cualquier excepción no capturada
         Response<String> response = new Response<>(false, "Ha ocurrido un error inesperado", null);
