@@ -8,10 +8,16 @@ import com.plantilla.apiestudiantes.model.Curso;
 import com.plantilla.apiestudiantes.model.Tema;
 import com.plantilla.apiestudiantes.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.dao.DataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.sql.SQLException;
 
 /**
  * Servicio para gestionar la lógica de negocio relacionada con los cursos.
@@ -31,21 +37,18 @@ import org.springframework.stereotype.Service;
 public class CursoService implements ICursoService {
     @Autowired
     private CursoRepository cursoRepository;
-
-
-
+    @Qualifier("messageSource")
+    @Autowired
+    private MessageSource messageSource;
 
 
     /**
      * Guarda un nuevo curso en el sistema después de realizar las validaciones necesarias
      *
      * Este método realiza las siguientes validaciones antes de guardar el curso
-     * -    Verifica que el ID del curso no exista previamente.
      * -    Verifica que el nombre del curso no esté ya registrado.
      *      Valida que la modalidad del curso sea "Presencial" o "Virtual".
-     *
-     * Luego de las validaciones, se asocia a los temas proporcionados, construye un objeto {@link Curso} y lo guarda
-     * en el repositorio.
+
      *
      * @param curso  El objeto con los datos del curso a guardar.
      * @return  Un objeto {@link Response} que contiene el resultado de la operación y el curso guardado.
@@ -53,6 +56,7 @@ public class CursoService implements ICursoService {
      */
     @Override
     public Response<CursoDto> saveCurso(Curso curso) {
+
         try{
             // Validaciones previas.
             validateNameNotExist(curso.getNombre());
@@ -64,30 +68,38 @@ public class CursoService implements ICursoService {
             // Construye el DTO para devolver
             CursoDto cursoDto = buildCursoDtoCreate(cursoAux);
 
-            return new Response<>(true, "Se ha guardado correctamente",cursoDto);
-        }catch (Exception ex) {
-            // Si ocurre un error, se lanza la DataBaseException con la información necesaria
+            //Mensaje de éxito
+            String successMessage = messageSource.getMessage(
+                    "curso.save.success",
+                    new Object[]{curso.getNombre()},
+                    LocaleContextHolder.getLocale());
+
+            return new Response<>(true, successMessage,cursoDto);
+
+        }catch (DataAccessException ex) {
+            // Captura problemas con la base de datos
+            String userMessage = messageSource.getMessage(
+                    "curso.save.error",
+                    new Object[]{curso.getNombre()},
+                    LocaleContextHolder.getLocale());
 
             //Se guarda el motivo de la causa raíz
             String rootCause = ex.getCause() != null ? ex.getCause().toString() : "Desconocida";
 
-            // Concatenar el nombre del curso para el mensaje al usuario
-            String userMessage = "Error al guardar el curso '" + curso.getNombre() + "'. Por favor, inténtelo nuevamente.";
-
-            throw new DataBaseException(
-                    userMessage,       // Mensaje al usuario
-                    "Curso",           // Tipo de entidad
-                    curso.getId(),     // ID del curso
-                    curso.getNombre(), // Nombre del curso
-                    "Save",            // Operation
-                    rootCause);        // Causa raíz del error
+            throw new DataBaseException(userMessage,"Curso", curso.getId(), curso.getNombre(), "Save", rootCause);
         }
     }
 
     private void validateNameNotExist (String name) {
-        if(cursoRepository.findByNombreIgnoreCase(name).isPresent()){
-            throw new CursoInvalidException("El curso con el nombre " + name + " ya está registrado");
+        if (cursoRepository.findByNombreIgnoreCase(name).isPresent()) {
+            // Obtiene el mensaje desde el archivo de propiedades
+            String userMessage = messageSource.getMessage(
+                    "curso.validate.name",  // Clave del mensaje
+                    new Object[]{name},          // Argumento para reemplazar en el mensaje
+                    LocaleContextHolder.getLocale());  // Localización actual
+            throw new CursoInvalidException(userMessage);
         }
+
     }
 
     private void validateModality (String modality) {
